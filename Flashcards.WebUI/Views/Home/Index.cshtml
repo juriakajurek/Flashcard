@@ -1,0 +1,22 @@
+﻿
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="w-100 h-100 d-flex flex-row justify-content-center align-items-center align-content-center flex-wrap">
+
+    @if (!Request.IsAuthenticated)
+    {
+        <div class="w-50">
+            <h5 class="card card-header">Please log in first so we can store your data.</h5>
+        </div>
+    }
+    else
+    {
+
+        @Html.ActionLink("Start learning!", "ChooseLevel", "Home", null, new { @class = "btn btn-dark card card-header" })
+    }
+</div>

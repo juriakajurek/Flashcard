@@ -1,0 +1,29 @@
+﻿@model Flashcards.Core.ViewModels.GameViewModel
+@{
+    ViewBag.Title = "Game";
+
+}
+
+<div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+
+
+
+    <p class="mb-5">
+        @Html.LabelFor(model => model.Level, htmlAttributes: new { @class = "" })
+        <br />
+        @Html.DisplayFor(model => model.Level)
+    </p>
+
+    @foreach (var f in Model.Flashcards)
+    {
+        @Html.ActionLink(f.Word, "Game", "Home", new { id = f.Id }, new { @class = "btn card card-body" })
+
+        
+    }
+
+
+    @Html.ActionLink(, "Game", "Home", new { level = 1 }, new { @class = "btn card card-body" })
+    <div class="btn card card-header col-md-4 d-flex flex-column align-items-center justify-content-center">
+        <p style="font-size: 2rem">Słowo</p>
+    </div>
+</div>

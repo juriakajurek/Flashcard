@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "ChooseLevel";
+}
+
+<div class="w-100 h-100 d-flex align-items-center justify-content-center">
+
+
+    <div class="col-md-3 card mt-5 mb-3 p-0">
+        <div class="col-md-12 card card-header w-100">Wybierz poziom</div>
+        @Html.ActionLink("I", "Game", "Home", new { level = 1}, new { @class = "btn card card-body" })
+        @Html.ActionLink("II", "Game", "Home", new { level = 2 }, new { @class = "btn card card-body" })
+        @Html.ActionLink("III", "Game", "Home", new { level = 3 }, new { @class = "btn card card-body" })
+        @Html.ActionLink("IV", "Game", "Home", new { level = 4 }, new { @class = "btn card card-body" })
+        @Html.ActionLink("V", "Game", "Home", new { level = 5 }, new { @class = "btn card card-body" })
+    </div>
+
+</div>
+
